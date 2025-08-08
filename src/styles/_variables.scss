@@ -1,0 +1,62 @@
+@use 'common' as *;
+
+:root {
+  --color-light: #ffffff;
+  --color-dark: #000000;
+
+  --color-primary: #703bf7;
+  --color-primary-65: #8254f8;
+  --color-primary-70: #946cf9;
+  --color-primary-75: #a685fa;
+  --color-primary-90: #dbcefd;
+  --color-primary-95: #ede7fe;
+  --color-primary-97: #f4f0fe;
+  --color-primary-99: #fbfaff;
+
+  --color-light-90: #e4e4e7;
+  --color-light-95: #f1f1f3;
+  --color-light-97: #f7f7f8;
+  --color-light-99: #fcfcfd;
+
+  --color-dark-08: #141414;
+  --color-dark-10: #1a1a1a;
+  --color-dark-15: #262626;
+  --color-dark-20: #333333;
+  --color-dark-30: #4d4d4d;
+  --color-dark-40: #666666;
+  --color-dark-50: #808080;
+  --color-dark-60: #999999;
+
+  --color-border: var(--color-dark-15);
+
+  --font-family: 'Urbanist', sans-serif;
+
+  --border: 1px solid var(--color-dark-15);
+
+  --container-width: 160rem;
+  --container-padding-inline: 1.6rem;
+
+  --header-height: 9.9rem;
+
+  --transition-duration: 0.2s;
+
+  @include laptop {
+    --container-width: 128rem;
+    --header-height: 7.7rem;
+  }
+
+  @include tablet {
+    --container-width: 90rem;
+    --header-height: 6.8rem;
+  }
+
+  @include mobile {
+    --container-width: 72rem;
+    --header-height: 6.8rem;
+  }
+
+  @include mobile-s {
+    --container-width: 36rem;
+    --header-height: 6.8rem;
+  }
+}

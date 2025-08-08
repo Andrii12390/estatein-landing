@@ -1,0 +1,24 @@
+@use './media' as *;
+
+@mixin text-base($muted: null) {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--color-light);
+
+  @if $muted {
+    color: var(--color-dark-60);
+  }
+
+  @include laptop {
+    font-size: 1.6rem;
+  }
+
+  @include mobile {
+    font-size: 1.4rem;
+  }
+}
+
+@mixin square($side) {
+  width: $side;
+  height: $side;
+}

@@ -1,0 +1,20 @@
+@use 'normalize';
+@use 'fonts';
+@use 'variables';
+@use 'globals';
+
+@use 'blocks/header';
+@use 'blocks/footer';
+@use 'blocks/logo';
+@use 'blocks/burger-button';
+@use 'blocks/hero';
+@use 'blocks/cta';
+@use 'blocks/button';
+@use 'blocks/faq';
+@use 'blocks/testimonials';
+@use 'blocks/properties';
+@use 'blocks/kpi-card';
+@use 'blocks/feature-card';
+@use 'blocks/banner';
+@use 'blocks/circle';
+@use 'blocks/pagination';

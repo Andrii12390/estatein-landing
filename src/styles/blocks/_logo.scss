@@ -1,0 +1,13 @@
+@use '../common' as *;
+
+.logo {
+  width: 16rem;
+
+  @include laptop {
+    width: 11.3rem;
+  }
+
+  @include mobile {
+    width: 9.3rem;
+  }
+}

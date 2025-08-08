@@ -1,0 +1,26 @@
+@use '../common/' as *;
+
+.kpi-card {
+  background-color: var(--color-dark-10);
+  padding: 1.6rem 2.4rem;
+  border-radius: 1.2rem;
+  border: var(--border);
+
+  @include laptop {
+    padding: 1.4rem 2rem;
+    border-radius: 1rem;
+  }
+
+  @include mobile {
+    padding: 1.4rem 1.4rem;
+    border-radius: 0.8rem;
+  }
+
+  &__value {
+    margin-bottom: 0.4rem;
+  }
+
+  &__text {
+    @include text-base(muted);
+  }
+}

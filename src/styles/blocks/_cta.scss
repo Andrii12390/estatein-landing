@@ -1,0 +1,62 @@
+@use '../common' as *;
+
+.cta {
+  background: url('/backgrounds/squares-overlay_1.svg') no-repeat -2rem bottom,
+    url('/backgrounds/squares-overlay_2.svg') no-repeat calc(100% + 4rem) bottom,
+    var(--color-dark-08);
+
+  background-size: 40% auto, 40% auto;
+  border-block: var(--border);
+
+  @include tablet {
+    background-position: -1rem bottom, calc(100% + 2rem) bottom;
+  }
+
+  @include mobile {
+    background-size: 80% auto, 100% auto;
+    background-position: -1000rem top, calc(100% + 4rem) bottom;
+  }
+
+  &__inner {
+    padding-block: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 25rem;
+
+    @include laptop {
+      padding-block: 6rem;
+      column-gap: 15rem;
+    }
+
+    @include mobile {
+      padding-block: 5rem;
+      flex-direction: column;
+      row-gap: 3rem;
+    }
+  }
+
+  &__title {
+    color: var(--color-light);
+    margin-bottom: 1.4rem;
+
+    @include laptop {
+      margin-bottom: 1rem;
+    }
+
+    @include mobile {
+      margin-bottom: 0.6rem;
+    }
+  }
+
+  &__description {
+    @include text-base(muted);
+  }
+
+  &__button {
+    @include mobile {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}

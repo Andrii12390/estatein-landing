@@ -1,0 +1,44 @@
+@use '../common/' as *;
+
+.pagination {
+  --button-size: 5.8rem;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+
+  @include laptop {
+    --button-size: 4.4rem;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: var(--border);
+    border-radius: 50%;
+    background-color: var(--color-dark-10);
+    cursor: pointer;
+    transition: all var(--transition-duration);
+    @include square(var(--button-size));
+
+    &:hover:not(&--disabled) {
+      background-color: var(--color-dark-15);
+      border-color: var(--color-dark-20);
+    }
+
+    &--disabled {
+      background-color: var(--color-dark-08);
+      cursor: not-allowed;
+      opacity: 0.5;
+    }
+  }
+
+  &__current-page {
+    @include text-base;
+  }
+
+  &__all-pages {
+    @include text-base(muted);
+  }
+}

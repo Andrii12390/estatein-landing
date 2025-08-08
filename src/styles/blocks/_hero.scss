@@ -1,0 +1,159 @@
+@use '../common/' as *;
+
+.hero {
+  background-color: var(--color-dark-08);
+  color: var(--color-light);
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 8rem;
+
+    @include laptop {
+      column-gap: 6rem;
+    }
+
+    @include tablet {
+      grid-template-columns: 1fr;
+      max-width: calc(var(--container-width) + var(--container-padding-inline) * 2);
+      padding-inline: var(--container-padding-inline);
+      margin-inline: auto;
+    }
+  }
+
+  &__body {
+    align-self: center;
+    display: grid;
+    gap: 5rem;
+    padding-left: 6rem;
+    padding-block: 4rem;
+
+    @include laptop {
+      gap: 4rem;
+      padding-left: 5rem;
+    }
+
+    @include tablet {
+      padding-left: 0;
+      gap: 3rem;
+    }
+  }
+
+  &__title {
+    margin-bottom: 2.4rem;
+
+    @include laptop {
+      margin-bottom: 2rem;
+    }
+
+    @include mobile {
+      margin-bottom: 1.6rem;
+    }
+  }
+
+  &__text {
+    @include text-base(muted);
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    a {
+      @include tablet {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    @include laptop {
+      gap: 1.6rem;
+    }
+
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+
+  &__kpi-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+
+    @include laptop {
+      gap: 1.6rem;
+    }
+
+    @include laptop {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.2rem;
+      text-align: center;
+
+      & > :nth-child(3) {
+        grid-column: span 2;
+      }
+    }
+  }
+
+  &__image-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+
+    background-image: url('/backgrounds/lines-overlay.svg'),
+      linear-gradient(to bottom left, #2a213f 6%, #191919 49%);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @include tablet {
+      order: -1;
+      border-radius: 1rem;
+      border: var(--border);
+      margin-top: 3rem;
+    }
+  }
+
+  &__image {
+    flex-shrink: 0;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  &__features-list {
+    grid-column: span 2;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    border-block: var(--border);
+    border-width: 1rem;
+    border-color: #191919;
+
+    @include laptop {
+      padding: 1rem;
+      gap: 1.6rem;
+    }
+
+    @include tablet {
+      grid-column: span 1;
+      grid-template-columns: repeat(2, 1fr);
+      border: none;
+    }
+  }
+
+  &__circle {
+    position: absolute;
+    top: 25%;
+    left: 0;
+    transform: translateX(-50%);
+
+    @include tablet {
+      top: 100%;
+      transform: translate(0, -60%);
+    }
+  }
+}

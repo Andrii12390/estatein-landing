@@ -1,0 +1,78 @@
+@use '../common/' as *;
+
+.feature-card {
+  position: relative;
+  background-color: var(--color-dark-10);
+  padding: 4rem 2rem;
+  border-radius: 1.2rem;
+  border: var(--border);
+  display: grid;
+  place-items: center;
+  gap: 2rem;
+
+  &:is(:hover, :focus) &__link-icon,
+  a:is(:hover, :focus) &__link-icon {
+    stroke: var(--color-primary);
+  }
+
+  @include laptop {
+    padding: 3rem 1.6rem;
+    border-radius: 1rem;
+    gap: 1.6rem;
+  }
+
+  @include tablet {
+    padding: 2rem 1.4rem;
+    gap: 1.4rem;
+  }
+
+  &__icon {
+    width: 8.2rem;
+
+    @include laptop {
+      width: 6rem;
+    }
+
+    @include mobile {
+      width: 4.8rem;
+    }
+  }
+
+  &__title {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+
+    @include laptop {
+      font-size: 1.6rem;
+    }
+
+    @include mobile {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__link {
+    position: absolute;
+    top: 1.4rem;
+    right: 1.4rem;
+
+    @include mobile {
+      top: 1rem;
+      right: 1rem;
+    }
+
+    &-icon {
+      width: 3.4rem;
+      transition: stroke var(--transition-duration);
+
+      @include laptop {
+        width: 2.6rem;
+      }
+
+      @include mobile {
+        width: 2rem;
+      }
+    }
+  }
+}

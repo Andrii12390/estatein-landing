@@ -1,0 +1,46 @@
+@use '../common' as *;
+
+.burger-button {
+  border: none;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.6rem;
+
+  @include square(3rem);
+
+  &.is-active {
+    .burger-button__line {
+      &:first-child {
+        rotate: 45deg;
+        transform-origin: 0;
+        translate: 0.3em -0.175em;
+      }
+
+      &:nth-child(2) {
+        rotate: -45deg;
+      }
+
+      &:last-child {
+        width: 0;
+      }
+    }
+  }
+
+  &__line {
+    width: 100%;
+    height: 2px;
+    background-color: currentColor;
+    border-radius: 1rem;
+    transition-duration: var(--transition-time);
+
+    &:last-child {
+      width: 60%;
+      align-self: flex-end;
+    }
+  }
+
+  @include mobile-gt {
+    display: none;
+  }
+}

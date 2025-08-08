@@ -1,0 +1,241 @@
+@use '../common/' as *;
+
+.properties {
+  background-color: var(--color-dark-08);
+  color: var(--color-light);
+
+  &__inner {
+    position: relative;
+    padding-top: 8rem;
+
+    @include tablet {
+      padding-top: 6rem;
+    }
+  }
+
+  &__header {
+    position: relative;
+  }
+
+  &__stars {
+    position: absolute;
+    top: -3rem;
+    left: -1rem;
+
+    @include laptop {
+      width: 5.5rem;
+      top: -2.5rem;
+    }
+
+    @include tablet {
+      width: 4.6rem;
+      top: -2rem;
+    }
+  }
+
+  &__title {
+    color: var(--color-light);
+    margin-bottom: 1.4rem;
+
+    @include laptop {
+      margin-bottom: 1rem;
+    }
+
+    @include mobile {
+      margin-bottom: 0.6rem;
+    }
+  }
+
+  &__description {
+    margin-bottom: 8rem;
+    @include text-base(muted);
+
+    @include laptop {
+      margin-bottom: 6rem;
+    }
+
+    @include mobile {
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+    padding-bottom: 5rem;
+    border-bottom: var(--border);
+    transition: opacity 0.2s ease-in-out;
+
+    &.is-fade-out {
+      opacity: 0.3;
+    }
+
+    &.is-fade-in {
+      opacity: 1;
+    }
+
+    @include laptop {
+      padding-bottom: 4rem;
+      gap: 3rem;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include mobile {
+      padding-bottom: 2.4rem;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    padding: 4rem;
+    display: grid;
+    gap: 3rem;
+    border: var(--border);
+    border-radius: 1.2rem;
+    overflow: hidden;
+
+    &-image-container {
+      overflow: hidden;
+      border-radius: 0.8rem;
+    }
+
+    &-image {
+      width: 100%;
+
+      height: auto;
+      object-fit: cover;
+      object-position: center;
+      transition: transform 0.3s ease;
+    }
+
+    &:hover &-image {
+      transform: scale(1.05);
+    }
+
+    @include laptop {
+      padding: 3rem;
+      gap: 2rem;
+    }
+
+    @include mobile {
+      padding: 2.4rem;
+      gap: 1.6rem;
+    }
+
+    &-text {
+      @include text-base(muted);
+
+      a {
+        &:not(:hover, :focus) {
+          color: var(--color-light);
+        }
+
+        text-decoration: underline;
+      }
+    }
+
+    &-sender {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+
+      @include laptop {
+        gap: 1rem;
+      }
+
+      &-source {
+        @include text-base(muted);
+      }
+    }
+
+    &-title {
+      margin-bottom: 0.6rem;
+
+      @include laptop {
+        margin-bottom: 0.4rem;
+      }
+
+      @include mobile {
+        margin-bottom: 0.2rem;
+      }
+    }
+
+    &-tag-list {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+
+      @include laptop {
+        gap: 0.6rem;
+      }
+    }
+
+    &-tag {
+      background-color: var(--color-dark-10);
+      padding: 0.8rem 1.4rem;
+      border-radius: 99rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      border: var(--border);
+
+      img {
+        aspect-ratio: 1/1;
+      }
+
+      span {
+        font-size: 1.8rem;
+        font-weight: 500;
+
+        @include laptop {
+          font-size: 1.4rem;
+        }
+      }
+
+      @include laptop {
+        padding-block: 0.6rem;
+      }
+    }
+
+    &-details {
+      display: flex;
+      column-gap: 5rem;
+
+      @include laptop {
+        column-gap: 4rem;
+      }
+
+      @include mobile {
+        column-gap: 3rem;
+      }
+    }
+
+    &-price {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      span {
+        font-size: 1.8rem;
+        font-weight: 500;
+        color: var(--color-dark-60);
+
+        @include laptop {
+          font-size: 1.4rem;
+        }
+      }
+    }
+
+    &-button {
+      width: 100%;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+  }
+}
