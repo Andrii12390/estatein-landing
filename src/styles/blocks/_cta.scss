@@ -1,52 +1,35 @@
 @use '../common' as *;
 
 .cta {
-  background: url('/backgrounds/squares-overlay_1.webp') no-repeat -2rem bottom,
-    url('/backgrounds/squares-overlay_2.webp') no-repeat calc(100% + 4rem) bottom,
-    var(--color-dark-08);
+  --inner-padding: 5rem;
+  --column-gap: var(--space-2xl);
+  --title-margin: var(--space-xs);
+  --bg-pos-1: -1000rem top;
+  --bg-pos-2: calc(100% + 4rem) bottom;
+  --bg-size-1: 80% auto;
+  --bg-size-2: 100% auto;
 
-  background-size: 40% auto, 40% auto;
+  background-color: var(--color-dark-08);
+  background-image: url('/backgrounds/squares-overlay_1.webp'),
+    url('/backgrounds/squares-overlay_2.webp');
+  background-repeat: no-repeat, no-repeat;
+  background-position: var(--bg-pos-1), var(--bg-pos-2);
+  background-size: var(--bg-size-1), var(--bg-size-2);
+
   border-block: var(--border);
 
-  @include tablet {
-    background-position: -1rem bottom, calc(100% + 2rem) bottom;
-  }
-
-  @include mobile {
-    background-size: 80% auto, 100% auto;
-    background-position: -1000rem top, calc(100% + 4rem) bottom;
-  }
-
   &__inner {
-    padding-block: 10rem;
+    padding-block: var(--inner-padding);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    column-gap: 25rem;
-
-    @include laptop {
-      padding-block: 6rem;
-      column-gap: 15rem;
-    }
-
-    @include mobile {
-      padding-block: 5rem;
-      flex-direction: column;
-      row-gap: 3rem;
-    }
+    gap: var(--column-gap);
   }
 
   &__title {
     color: var(--color-light);
-    margin-bottom: 1.4rem;
-
-    @include laptop {
-      margin-bottom: 1rem;
-    }
-
-    @include mobile {
-      margin-bottom: 0.6rem;
-    }
+    margin-block-end: var(--title-margin);
   }
 
   &__description {
@@ -54,9 +37,30 @@
   }
 
   &__button {
-    @include mobile {
-      width: 100%;
-      text-align: center;
+    width: 100%;
+  }
+
+  @include laptop {
+    --inner-padding: 6rem;
+    --title-margin: var(--space-sm);
+    --bg-pos-1: -1rem bottom;
+    --bg-pos-2: calc(100% + 2rem) bottom;
+
+    &__inner {
+      flex-direction: row;
+      text-align: left;
     }
+
+    &__button {
+      width: auto;
+    }
+  }
+
+  @include desktop {
+    --inner-padding: 10rem;
+    --column-gap: 25rem;
+    --title-margin: var(--space-md);
+    --bg-size-1: 40% auto;
+    --bg-size-2: 40% auto;
   }
 }

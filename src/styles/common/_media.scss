@@ -1,52 +1,21 @@
-$laptop: 1440.98px;
-$tablet: 1023.98px;
-$mobile: 767.98px;
-$mobile-s: 480.98px;
+$tablet: '(min-width: 767.98px)';
+$laptop: '(min-width: 1023.98px)';
+$desktop: '(min-width: 1439.98px)';
 
-@mixin desktop {
-  @media (width > $laptop) {
+@mixin tablet {
+  @media ($tablet) {
     @content;
   }
 }
 
 @mixin laptop {
-  @media (width < $laptop) {
+  @media ($laptop) {
     @content;
   }
 }
 
-@mixin tablet-gt {
-  @media (width > $tablet) {
-    @content;
-  }
-}
-
-@mixin tablet {
-  @media (width <= $tablet) {
-    @content;
-  }
-}
-
-@mixin mobile-gt {
-  @media (width > $mobile) {
-    @content;
-  }
-}
-
-@mixin mobile {
-  @media (width <= $mobile) {
-    @content;
-  }
-}
-
-@mixin mobile-s-gt {
-  @media (width > $mobile-s) {
-    @content;
-  }
-}
-
-@mixin mobile-s {
-  @media (width <= $mobile-s) {
+@mixin desktop {
+  @media ($desktop) {
     @content;
   }
 }

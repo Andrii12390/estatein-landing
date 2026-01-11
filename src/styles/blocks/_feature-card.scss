@@ -1,78 +1,68 @@
 @use '../common/' as *;
 
 .feature-card {
+  --card-padding: var(--space-lg) var(--space-md);
+  --card-radius: var(--radius-lg);
+  --card-gap: var(--space-sm);
+  --icon-width: 4.8rem;
+  --link-icon-width: 2rem;
+  --title-font-size: var(--font-sm);
+
   position: relative;
   background-color: var(--color-dark-10);
-  padding: 4rem 2rem;
-  border-radius: 1.2rem;
+  padding: var(--card-padding);
+  border-radius: var(--card-radius);
   border: var(--border);
   display: grid;
   place-items: center;
-  gap: 2rem;
+  gap: var(--card-gap);
+  text-align: center;
 
   &:is(:hover, :focus) &__link-icon,
   a:is(:hover, :focus) &__link-icon {
     stroke: var(--color-primary);
   }
 
-  @include laptop {
-    padding: 3rem 1.6rem;
-    border-radius: 1rem;
-    gap: 1.6rem;
-  }
-
-  @include tablet {
-    padding: 2rem 1.4rem;
-    gap: 1.4rem;
-  }
-
   &__icon {
-    width: 8.2rem;
-
-    @include laptop {
-      width: 6rem;
-    }
-
-    @include mobile {
-      width: 4.8rem;
-    }
+    width: var(--icon-width);
   }
 
   &__title {
-    font-size: 2rem;
-    font-weight: 600;
-    text-align: center;
-
-    @include laptop {
-      font-size: 1.6rem;
-    }
-
-    @include mobile {
-      font-size: 1.4rem;
-    }
+    font-size: var(--title-font-size);
+    font-weight: var(--font-semibold);
   }
 
   &__link {
     position: absolute;
-    top: 1.4rem;
-    right: 1.4rem;
-
-    @include mobile {
-      top: 1rem;
-      right: 1rem;
-    }
+    inset: var(--space-xs) var(--space-xs) 0 0;
+    width: fit-content;
+    height: fit-content;
+    margin-inline-start: auto;
 
     &-icon {
-      width: 3.4rem;
+      width: var(--link-icon-width);
       transition: stroke var(--transition-duration);
-
-      @include laptop {
-        width: 2.6rem;
-      }
-
-      @include mobile {
-        width: 2rem;
-      }
     }
+  }
+
+  @include laptop {
+    --card-padding: var(--space-2xl) var(--space-md);
+    --card-gap: var(--space-md);
+    --icon-width: 6rem;
+    --link-icon-width: 2.6rem;
+    --title-font-size: var(--font-md);
+
+    &__link {
+      inset: var(--space-md) var(--space-md) 0 0;
+    }
+  }
+
+  @include desktop {
+    --card-padding: var(--space-3xl) var(--space-lg);
+    --card-radius: var(--radius-xl);
+    --card-gap: var(--space-lg);
+    --icon-width: 8.2rem;
+    --link-icon-width: 3.4rem;
+    --title-font-size: var(--font-xl);
   }
 }

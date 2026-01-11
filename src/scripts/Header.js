@@ -15,7 +15,7 @@ class Header {
     this.burgerButtonElement = this.rootElement.querySelector(this.selectors.burgerButton);
     this.navbarElement = this.rootElement.querySelector(this.selectors.navbar);
 
-    this.initEvents();
+    this.init();
   }
 
   toggleNavbar = () => {
@@ -23,17 +23,18 @@ class Header {
     this.navbarElement.classList.toggle(this.stateClasses.isOpenNavbar);
   };
 
-  initEvents() {
+  handleLinkClick = e => {
+    const currentElement = e.target;
+
+    if (currentElement.classList.contains('header__nav-link')) {
+      this.navbarElement.classList.remove(this.stateClasses.isOpenNavbar);
+      this.burgerButtonElement.classList.remove(this.stateClasses.isActiveBurgerButton);
+    }
+  };
+
+  init() {
     this.burgerButtonElement.addEventListener('click', this.toggleNavbar);
-
-    this.navbarElement.addEventListener('click', e => {
-      const currentElement = e.target;
-
-      if (currentElement.classList.contains('header__nav-link')) {
-        this.navbarElement.classList.remove(this.stateClasses.isOpenNavbar);
-        this.burgerButtonElement.classList.remove(this.stateClasses.isActiveBurgerButton);
-      }
-    });
+    this.navbarElement.addEventListener('click', this.handleLinkClick);
   }
 }
 

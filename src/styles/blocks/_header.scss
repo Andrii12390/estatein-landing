@@ -1,102 +1,93 @@
 @use '../common' as *;
 
 .header {
-  background-color: var(--color-dark-10);
-  height: var(--header-height);
-  color: var(--color-light);
-  border-bottom: var(--border);
   position: sticky;
   top: 0;
-  z-index: 9999;
+  z-index: 99;
+  height: var(--header-height);
+  background-color: var(--color-dark-10);
+  color: var(--color-light);
+  border-bottom: var(--border);
 
-  animation-name: scrolling-header;
-  animation-fill-mode: both;
+  animation: scrolling-header both;
   animation-timeline: scroll();
   animation-range: 10rem 20rem;
 
-  @keyframes scrolling-header {
-    to {
-      box-shadow: 0 0 1rem 0 var(--color-dark-30);
-    }
-  }
-
   &__inner {
-    height: 100%;
-    display: flex;
+    @include text-base;
+    @include flex-center;
     justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
-
-    font-size: 1.8rem;
-    font-weight: 500;
-
-    @include laptop {
-      font-size: 1.4rem;
-    }
+    height: 100%;
+    gap: var(--space-sm);
   }
 
   &__nav {
-    &-list {
-      display: flex;
-      align-items: center;
-      gap: 3rem;
+    @include flex-center;
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    background-color: var(--color-dark-10);
 
-      @include laptop {
-        gap: 2.4rem;
-      }
+    &:not(.is-open) {
+      display: none;
+    }
+  }
 
-      @include mobile {
-        justify-content: center;
-        flex-direction: column;
-      }
+  &__nav-list {
+    @include flex-center(column);
+    gap: var(--space-xl);
+  }
+
+  &__nav-item {
+    &--active {
+      padding: var(--space-sm) var(--space-lg);
+      background-color: var(--color-dark-08);
+      border: var(--border);
+      border-radius: var(--radius-lg);
+      pointer-events: none;
     }
 
-    &-item {
-      &--active {
-        padding: 1.4rem 2.4rem;
-        border-radius: 1rem;
-        background-color: var(--color-dark-08);
-        border: var(--border);
-        pointer-events: none;
+    &--contact {
+      margin-block-start: var(--space-lg);
 
-        @include laptop {
-          padding: 1.2rem 2rem;
-        }
-      }
-
-      &--contact {
-        @include mobile {
-          margin-top: 2rem;
-
-          .button {
-            width: 100%;
-            text-align: center;
-          }
-        }
-      }
-    }
-
-    @include mobile {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      width: 100vw;
-      height: 100vh;
-      background-color: var(--color-dark-10);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 10000;
-
-      &:not(.is-open) {
-        display: none;
+      .button {
+        width: 100%;
       }
     }
   }
 
   &__burger-button {
-    z-index: 10001;
+    z-index: 101;
+  }
+
+  @include laptop {
+    &__nav {
+      position: static;
+      display: flex !important;
+      background-color: transparent;
+    }
+
+    &__nav-list {
+      flex-direction: row;
+      gap: var(--space-2xl);
+    }
+
+    &__nav-item {
+      &--active {
+        padding: var(--space-md) var(--space-xl);
+      }
+
+      &--contact {
+        margin-block-start: 0;
+
+        .button {
+          width: auto;
+        }
+      }
+    }
+
+    &__burger-button {
+      display: none;
+    }
   }
 }

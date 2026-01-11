@@ -1,26 +1,21 @@
 @use '../common/' as *;
 
 .pagination {
-  --button-size: 5.8rem;
+  --button-size: 4.4rem;
 
   display: inline-flex;
   align-items: center;
-  gap: 1rem;
-
-  @include laptop {
-    --button-size: 4.4rem;
-  }
+  gap: var(--space-sm);
 
   &__button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex-center;
+    @include square(var(--button-size));
+
     border: var(--border);
     border-radius: 50%;
     background-color: var(--color-dark-10);
     cursor: pointer;
     transition: all var(--transition-duration);
-    @include square(var(--button-size));
 
     &:hover:not(&--disabled) {
       background-color: var(--color-dark-15);
@@ -34,11 +29,21 @@
     }
   }
 
+  &__controls {
+    width: 6rem;
+    text-align: center;
+    text-wrap: nowrap;
+  }
+
   &__current-page {
     @include text-base;
   }
 
   &__all-pages {
     @include text-base(muted);
+  }
+
+  @include desktop {
+    --button-size: 5.8rem;
   }
 }

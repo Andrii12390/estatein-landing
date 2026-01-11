@@ -11,14 +11,15 @@ class Banner {
   constructor() {
     this.rootElement = document.querySelector(this.selectors.root);
     this.closeBannerButtonElement = this.rootElement.querySelector(this.selectors.closeButton);
-    this.initEvents();
+
+    this.init();
   }
 
   handleClose = () => {
     this.rootElement.classList.add(this.stateClasses.isClosed);
   };
 
-  initEvents() {
+  init() {
     this.closeBannerButtonElement.addEventListener('click', this.handleClose);
   }
 }

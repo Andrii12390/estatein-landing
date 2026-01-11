@@ -1,21 +1,12 @@
 @use '../common/' as *;
 
 .circle {
-  --image-size: 16rem;
-  --inner-circle-size: 7.7rem;
-
-  @include laptop {
-    --image-size: 13rem;
-    --inner-circle-size: 6rem;
-  }
-
-  @include tablet {
-    --image-size: 12rem;
-    --inner-circle-size: 5.4rem;
-  }
+  --image-size: 12rem;
+  --inner-circle-size: 5.4rem;
 
   &__overlay {
     position: relative;
+    display: inline-block;
 
     &::after {
       content: '';
@@ -23,16 +14,14 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      background: var(--color-dark-10) url('/icons/arrow-top-right_white.svg') center / 2.4rem
-        no-repeat;
-
-      border: var(--border);
-      border-width: 0.15rem;
+      background: var(--color-dark-10) url('/icons/arrow-top-right_white.svg') no-repeat center /
+        2.4rem;
+      border: 0.15rem solid var(--color-border);
       border-radius: 50%;
       @include square(var(--inner-circle-size));
+      pointer-events: none;
     }
 
-    &:hover ~ .circle__image,
     &:hover {
       .circle__image {
         animation-play-state: paused;
@@ -41,10 +30,20 @@
   }
 
   &__image {
+    display: block;
     @include square(var(--image-size));
-    border: var(--border);
-    border-width: 0.2rem;
+    border: 0.2rem solid var(--color-border);
     border-radius: 50%;
     animation: spin 10s linear infinite;
+  }
+
+  @include laptop {
+    --image-size: 13rem;
+    --inner-circle-size: 6rem;
+  }
+
+  @include desktop {
+    --image-size: 16rem;
+    --inner-circle-size: 7.7rem;
   }
 }

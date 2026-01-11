@@ -1,26 +1,32 @@
 @use '../common/' as *;
 
 .kpi-card {
+  --card-padding: var(--space-md);
+  --card-radius: var(--radius-md);
+
   background-color: var(--color-dark-10);
-  padding: 1.6rem 2.4rem;
-  border-radius: 1.2rem;
+  padding: var(--card-padding);
+  border-radius: var(--card-radius);
   border: var(--border);
-
-  @include laptop {
-    padding: 1.4rem 2rem;
-    border-radius: 1rem;
-  }
-
-  @include mobile {
-    padding: 1.4rem 1.4rem;
-    border-radius: 0.8rem;
-  }
+  text-align: center;
 
   &__value {
-    margin-bottom: 0.4rem;
+    margin-block-end: var(--space-2xs);
   }
 
   &__text {
     @include text-base(muted);
+  }
+
+  @include laptop {
+    --card-padding: var(--space-md) var(--space-lg);
+    --card-radius: var(--radius-lg);
+
+    text-align: unset;
+  }
+
+  @include desktop {
+    --card-padding: var(--space-md) var(--space-xl);
+    --card-radius: var(--radius-xl);
   }
 }

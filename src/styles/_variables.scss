@@ -19,7 +19,9 @@
   --color-light-99: #fcfcfd;
 
   --color-dark-08: #141414;
+  --color-dark-09: #191919;
   --color-dark-10: #1a1a1a;
+  --color-dark-11: #2a213f;
   --color-dark-15: #262626;
   --color-dark-20: #333333;
   --color-dark-30: #4d4d4d;
@@ -32,31 +34,59 @@
   --font-family: 'Urbanist', sans-serif;
 
   --border: 1px solid var(--color-dark-15);
+  --features-border: 1rem solid var(--color-dark-09);
 
-  --container-width: 160rem;
+  --container-width: 72rem;
   --container-padding-inline: 1.6rem;
+  --header-height: 6.8rem;
 
-  --header-height: 9.9rem;
+  --space-2xs: 0.4rem;
+  --space-xs: 0.8rem;
+  --space-sm: 1.2rem;
+  --space-md: 1.6rem;
+  --space-lg: 2rem;
+  --space-xl: 2.4rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --space-4xl: 5rem;
+  --space-5xl: 6rem;
+  --space-6xl: 8rem;
+  --space-7xl: 10rem;
+
+  --radius-xs: 0.4rem;
+  --radius-sm: 0.6rem;
+  --radius-md: 0.8rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.2rem;
+  --radius-full: 99rem;
+
+  --font-xs: 1.2rem;
+  --font-sm: 1.4rem;
+  --font-md: 1.6rem;
+  --font-lg: 1.8rem;
+  --font-xl: 2.2rem;
+  --font-2xl: 2.8rem;
+  --font-3xl: 3.8rem;
+  --font-4xl: 4.6rem;
+  --font-5xl: 6rem;
+
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
 
   --transition-duration: 0.2s;
+
+  @include tablet {
+    --container-width: 90rem;
+  }
 
   @include laptop {
     --container-width: 128rem;
     --header-height: 7.7rem;
   }
 
-  @include tablet {
-    --container-width: 90rem;
-    --header-height: 6.8rem;
-  }
-
-  @include mobile {
-    --container-width: 72rem;
-    --header-height: 6.8rem;
-  }
-
-  @include mobile-s {
-    --container-width: 36rem;
-    --header-height: 6.8rem;
+  @include desktop {
+    --container-width: 160rem;
+    --header-height: 9.9rem;
   }
 }

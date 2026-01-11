@@ -1,19 +1,19 @@
 @use '../common/' as *;
 
 .banner {
+  --banner-padding: var(--space-sm);
+  --image-size: 1rem;
+  --button-padding: var(--space-xs);
+  --button-right: var(--space-md);
+
   position: relative;
-  background-color: var(--color-dark-08);
-  padding: 1.8rem;
+  padding: var(--banner-padding);
+  background: var(--color-dark-08) url('/backgrounds/lines-overlay.svg');
   border-bottom: var(--border);
   text-align: center;
-  background-image: url('/backgrounds/lines-overlay.svg');
 
   &.is-closed {
     display: none;
-  }
-
-  @include laptop {
-    padding: 1.4rem;
   }
 
   &__text {
@@ -22,31 +22,39 @@
 
   &__close-button {
     position: absolute;
-    background-color: rgba(#ffffff, 0.1);
-    border-radius: 50%;
-    padding: 1rem;
-    right: 2rem;
     top: 50%;
+    right: var(--button-right);
     transform: translateY(-50%);
     display: grid;
     place-items: center;
+    padding: var(--button-padding);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color var(--transition-duration) ease;
 
-    @include laptop {
-      padding: 0.8rem;
-      right: 1.5rem;
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.2);
     }
 
     img {
-      width: 1.4rem;
-
-      @include laptop {
-        width: 1rem;
-      }
+      display: block;
+      width: var(--image-size);
+      height: var(--image-size);
+      object-fit: contain;
     }
   }
 
   &__link {
+    margin-inline-start: 0.5rem;
     text-decoration: underline !important;
-    margin-left: 0.5rem;
+    text-underline-offset: 0.3rem;
+  }
+
+  @include desktop {
+    --banner-padding: var(--space-md);
+    --image-size: 1.4rem;
+    --button-padding: var(--space-sm);
+    --button-right: var(--space-lg);
   }
 }
