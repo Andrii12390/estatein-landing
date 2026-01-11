@@ -1,8 +1,8 @@
 @use '../common' as *;
 
 .cta {
-  background: url('/backgrounds/squares-overlay_1.svg') no-repeat -2rem bottom,
-    url('/backgrounds/squares-overlay_2.svg') no-repeat calc(100% + 4rem) bottom,
+  background: url('/backgrounds/squares-overlay_1.webp') no-repeat -2rem bottom,
+    url('/backgrounds/squares-overlay_2.webp') no-repeat calc(100% + 4rem) bottom,
     var(--color-dark-08);
 
   background-size: 40% auto, 40% auto;

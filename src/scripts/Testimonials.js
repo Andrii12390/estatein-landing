@@ -43,7 +43,7 @@ class Testimonials {
         text: "Our experience with Estatein was outstanding. Their team's dedication and professionalism made finding our dream home a breeze. Highly recommended!",
         name: 'Wade Warren',
         location: 'USA, California',
-        image: 'testimonials/wade-warren.png',
+        image: 'testimonials/wade-warren.webp',
       },
       {
         stars: 5,
@@ -51,7 +51,7 @@ class Testimonials {
         text: "Our experience with Estatein was outstanding, they provided us with top-notch service. They helped us sell our property quickly and at a great price. We couldn't be happier with the results.",
         name: 'Emelie Thomson',
         location: 'USA, Florida',
-        image: 'testimonials/emilie-thompson.png',
+        image: 'testimonials/emilie-thompson.webp',
       },
       {
         stars: 5,
@@ -59,7 +59,7 @@ class Testimonials {
         text: 'The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!',
         name: 'John Mans',
         location: 'USA, Nevada',
-        image: 'testimonials/john-mans.png',
+        image: 'testimonials/john-mans.webp',
       },
       {
         stars: 5,
@@ -67,7 +67,7 @@ class Testimonials {
         text: 'From our first meeting to closing day, Estatein provided exceptional support. They answered all our questions and made the process stress-free.',
         name: 'Sarah Johnson',
         location: 'USA, Texas',
-        image: 'testimonials/wade-warren.png',
+        image: 'testimonials/wade-warren.webp',
       },
       {
         stars: 5,
@@ -75,7 +75,7 @@ class Testimonials {
         text: 'The professionalism and expertise of the Estatein team is unmatched. They helped us navigate the complex real estate market with ease.',
         name: 'Michael Chen',
         location: 'USA, New York',
-        image: 'testimonials/john-mans.png',
+        image: 'testimonials/john-mans.webp',
       },
     ];
   };

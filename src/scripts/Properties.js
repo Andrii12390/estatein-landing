@@ -40,7 +40,7 @@ class Properties {
   getPropertiesData = () => {
     return [
       {
-        image: 'properties/property-1.png',
+        image: 'properties/property-1.webp',
         title: 'Seaside Serenity Villa',
         description:
           'A stunning 4-bedroom, 3-bathroom villa in a peaceful suburban neighborhood...',
@@ -50,7 +50,7 @@ class Properties {
         price: '$550,000',
       },
       {
-        image: 'properties/property-2.png',
+        image: 'properties/property-2.webp',
         title: 'Metropolitan Haven',
         description: 'A chic and fully-furnished 2-bedroom apartment with panoramic city views...',
         bedrooms: '2-Bedroom',
@@ -59,7 +59,7 @@ class Properties {
         price: '$480,000',
       },
       {
-        image: 'properties/property-3.png',
+        image: 'properties/property-3.webp',
         title: 'Rustic Retreat Cottage',
         description: 'An elegant 3-bedroom, 2.5-bathroom townhouse in a gated community...',
         bedrooms: '3-Bedroom',
@@ -68,7 +68,7 @@ class Properties {
         price: '$640,000',
       },
       {
-        image: 'properties/property-1.png',
+        image: 'properties/property-1.webp',
         title: 'Modern City Apartment',
         description: 'Contemporary 1-bedroom apartment in the heart of downtown...',
         bedrooms: '1-Bedroom',
@@ -77,7 +77,7 @@ class Properties {
         price: '$320,000',
       },
       {
-        image: 'properties/property-2.png',
+        image: 'properties/property-2.webp',
         title: 'Luxury Penthouse',
         description: 'Exclusive penthouse with breathtaking views and premium amenities...',
         bedrooms: '5-Bedroom',
@@ -86,7 +86,7 @@ class Properties {
         price: '$1,200,000',
       },
       {
-        image: 'properties/property-3.png',
+        image: 'properties/property-3.webp',
         title: 'Family Suburban Home',
         description: 'Perfect family home with large garden and quiet neighborhood...',
         bedrooms: '4-Bedroom',
