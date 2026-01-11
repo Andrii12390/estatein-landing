@@ -1,937 +1,622 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      href="/estatein-landing/favicon-96x96.png"
-      sizes="96x96"
-    />
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="/estatein-landing/favicon.svg"
-    />
-    <link
-      rel="shortcut icon"
-      href="/estatein-landing/favicon.ico"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/estatein-landing/apple-touch-icon.png"
-    />
-    <meta
-      name="apple-mobile-web-app-title"
-      content="Estatein"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+  />
+  <link rel="icon" type="image/png" href="/estatein-landing/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/estatein-landing/favicon.svg" />
+  <link rel="shortcut icon" href="/estatein-landing/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/estatein-landing/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Estatein" />
 
-    <title>Estatein - Find Your Dream Property</title>
-    <meta
-      name="description"
-      content="Discover exceptional homes and investment opportunities with Estatein. Browse premium properties, get expert advice, and find your perfect home today. Trusted real estate agency with 16+ years of experience."
-    />
-    <meta
-      name="keywords"
-      content="real estate, properties for sale, buy property, sell house, luxury homes, apartments, villas, real estate agency, property investment, dream home"
-    />
-    <meta
-      name="author"
-      content="Pasiura Andrii"
-    />
-    <meta
-      name="language"
-      content="English"
-    />
-    <meta
-      name="theme-color"
-      content="#1a1a1a"
-    />
-    <meta
-      property="og:type"
-      content="website"
-    />
-    <meta
-      property="og:title"
-      content="Estatein - Find Your Dream Property | Premium Real Estate Agency"
-    />
-    <meta
-      property="og:description"
-      content="Discover exceptional homes and investment opportunities with Estatein. Browse premium properties and find your perfect home today."
-    />
-    <meta
-      property="og:image"
-      content="https://andrii12390.github.io/estatein-landing/og-image.png"
-    />
-    <meta
-      property="og:url"
-      content="https://andrii12390.github.io/estatein-landing/"
-    />
-    <meta
-      property="og:site_name"
-      content="Estatein"
-    />
-    <meta
-      property="og:locale"
-      content="en_US"
-    />
+  <title>Estatein - Find Your Dream Property</title>
+  <meta
+    name="description"
+    content="Discover exceptional homes and investment opportunities with Estatein. Browse premium properties, get expert advice, and find your perfect home today. Trusted real estate agency with 16+ years of experience."
+  />
+  <meta
+    name="keywords"
+    content="real estate, properties for sale, buy property, sell house, luxury homes, apartments, villas, real estate agency, property investment, dream home"
+  />
+  <meta name="author" content="Pasiura Andrii" />
+  <meta name="language" content="English" />
+  <meta name="theme-color" content="#1a1a1a" />
+  <meta property="og:type" content="website" />
+  <meta
+    property="og:title"
+    content="Estatein - Find Your Dream Property | Premium Real Estate Agency"
+  />
+  <meta
+    property="og:description"
+    content="Discover exceptional homes and investment opportunities with Estatein. Browse premium properties and find your perfect home today."
+  />
+  <meta
+    property="og:image"
+    content="https://andrii12390.github.io/estatein-landing/og-image.png"
+  />
+  <meta
+    property="og:url" content="https://andrii12390.github.io/estatein-landing/"
+  />
+  <meta property="og:site_name" content="Estatein" />
+  <meta property="og:locale" content="en_US" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Estatein - Find Your Dream Property" />
+  <meta
+    name="twitter:description"
+    content="Discover exceptional homes and investment opportunities with Estatein. Browse premium properties and find your perfect home today."
+  />
+  <meta
+    name="twitter:image"
+    content="https://andrii12390.github.io/estatein-landing/og-image.png"
+  />
+  <meta name="twitter:site" content="@estatein" />
+  <meta name="twitter:creator" content="@estatein" />
+  <script type="module" crossorigin src="/estatein-landing/assets/index-Dv-Il51S.js"></script>
+  <link rel="stylesheet" crossorigin href="/estatein-landing/assets/index-C-12akOm.css">
+</head>
 
-    <meta
-      name="twitter:card"
-      content="summary_large_image"
-    />
-    <meta
-      name="twitter:title"
-      content="Estatein - Find Your Dream Property"
-    />
-    <meta
-      name="twitter:description"
-      content="Discover exceptional homes and investment opportunities with Estatein. Browse premium properties and find your perfect home today."
-    />
-    <meta
-      name="twitter:image"
-      content="https://andrii12390.github.io/estatein-landing/og-image.png"
-    />
-    <meta
-      name="twitter:site"
-      content="@estatein"
-    />
-    <meta
-      name="twitter:creator"
-      content="@estatein"
-    />
-    <script type="module" crossorigin src="/estatein-landing/assets/index-paprebPk.js"></script>
-    <link rel="stylesheet" crossorigin href="/estatein-landing/assets/index-DBrrs7an.css">
-  </head>
-  <body>
-    <section
-      class="banner"
-      data-js-banner
+<body>
+<div class="banner" data-js-banner>
+  <p class="banner__text">
+    ✨Discover Your Dream Property
+    <a href="#" class="banner__link"> Learn More</a>
+  </p>
+  <button
+    title="Close banner" class="banner__close-button"
+    data-js-close-banner-button
+  >
+    <img src="icons/x.svg" alt="X" width="14" height="14" />
+  </button>
+</div>
+
+<header class="header" data-js-header>
+  <div class="header__inner container">
+    <a href="#" class="header__logo logo" aria-label="Home" title="Home">
+      <img src="backgrounds/logo.svg" alt="Logo" width="160" height="48" />
+    </a>
+
+    <nav class="header__nav" data-js-nav>
+      <ul class="header__nav-list">
+        <li class="header__nav-item header__nav-item--active">
+          <a href="#" class="header__nav-link">Home</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="#" class="header__nav-link">About Us</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="#" class="header__nav-link">Properties</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="#" class="header__nav-link">Services</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="#" class="header__nav-link">Contact Us</a>
+        </li>
+      </ul>
+    </nav>
+
+    <button
+      class="header__burger-button burger-button"
+      aria-label="Open Menu"
+      title="Open Menu"
+      data-js-burger-button
     >
-      <p class="banner__text">
-        ✨Discover Your Dream Property
-        <a
-          href="#"
-          class="banner__link"
-        >
-          Learn More</a
-        >
-      </p>
-      <button
-        title="Close banner"
-        class="banner__close-button"
-        data-js-close-banner-button
-      >
-        <img
-          src="icons/x.svg"
-          alt="X"
-          width="14"
-          height="14"
-        />
-      </button>
-    </section>
+      <span class="burger-button__line"></span>
+      <span class="burger-button__line"></span>
+      <span class="burger-button__line"></span>
+    </button>
+  </div>
+</header>
 
-    <header
-      class="header"
-      data-js-header
-    >
-      <div class="header__inner container">
-        <a
-          href="#"
-          class="header__logo logo"
-          aria-label="Home"
-          title="Home"
-        >
-          <img
-            src="backgrounds/logo.svg"
-            alt="Logo"
-            width="160"
-            height="48"
-          />
-        </a>
-
-        <nav
-          class="header__nav"
-          data-js-nav
-        >
-          <ul class="header__nav-list">
-            <li class="header__nav-item header__nav-item--active">
-              <a
-                href="#"
-                class="header__nav-link"
-                >Home</a
-              >
-            </li>
-            <li class="header__nav-item">
-              <a
-                href="#"
-                class="header__nav-link"
-                >About Us</a
-              >
-            </li>
-            <li class="header__nav-item">
-              <a
-                href="#"
-                class="header__nav-link"
-                >Properties</a
-              >
-            </li>
-            <li class="header__nav-item">
-              <a
-                href="#"
-                class="header__nav-link"
-                >Services</a
-              >
-            </li>
-            <li class="header__nav-item">
-              <a
-                href="#"
-                class="header__nav-link"
-                >Contact Us</a
-              >
-            </li>
-          </ul>
-        </nav>
-
-        <button
-          class="header__burger-button burger-button"
-          aria-label="Open Menu"
-          title="Open Menu"
-          data-js-burger-button
-        >
-          <span class="burger-button__line"></span>
-          <span class="burger-button__line"></span>
-          <span class="burger-button__line"></span>
-        </button>
+<div class="hero">
+  <div class="hero__inner">
+    <div class="hero__body">
+      <div class="hero__info">
+        <h1 class="hero__title">
+          Discover Your Dream <br />
+          Property with Estatein
+        </h1>
+        <p class="hero__text">
+          Your journey to finding the perfect property begins here. Explore our listings to find the
+          home that matches your dreams.
+        </p>
       </div>
+
+      <div class="hero__actions">
+        <a href="#" class="button">Learn More</a>
+        <a href="#" class="button button--primary">Browse Properties</a>
+      </div>
+
+      <ul class="hero__kpi-list">
+        <li class="hero__kpi-item kpi-card">
+          <h3 class="kpi-card__value">200+</h3>
+          <p class="kpi-card__text">Happy Customers</p>
+        </li>
+
+        <li class="hero__kpi-item kpi-card">
+          <h3 class="kpi-card__value">10k+</h3>
+          <p class="kpi-card__text">Properties For Clients</p>
+        </li>
+
+        <li class="hero__kpi-item kpi-card">
+          <h3 class="kpi-card__value">16+</h3>
+          <p class="kpi-card__text">Years of Experience</p>
+        </li>
+      </ul>
+    </div>
+    <div class="hero__image-wrapper">
+      <div class="hero__circle circle">
+        <div class="circle__overlay">
+          <img
+            src="backgrounds/circle.webp" alt="" width="170" height="170"
+            class="circle__image"
+          />
+        </div>
+      </div>
+
+      <img
+        src="backgrounds/hero.webp" alt="Hero image" width="900" height="900"
+        class="hero__image"
+      />
+    </div>
+    <ul class="hero__features-list">
+      <li class="hero__features-item feature-card">
+        <img
+          src="features/feature-1.webp" alt="" width="82" height="82"
+          class="feature-card__icon"
+        />
+        <p class="feature-card__title">Find Your Dream Home</p>
+        <a href="#" class="feature-card__link">
+          <svg
+            width="34"
+            height="34"
+            viewBox="0 0 34 34"
+            stroke="#4D4D4D"
+            xmlns="http://www.w3.org/2000/svg"
+            class="feature-card__link-icon"
+          >
+            <path
+              d="M6.375 27.625L27.625 6.375M27.625 6.375L11.6875 6.375M27.625 6.375V22.3125"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+      </li>
+
+      <li class="hero__features-item feature-card">
+        <img
+          src="features/feature-2.webp" alt="" width="82" height="82"
+          class="feature-card__icon"
+        />
+        <p class="feature-card__title">Unlock Property Value</p>
+        <a href="#" class="feature-card__link">
+          <svg
+            width="34"
+            height="34"
+            viewBox="0 0 34 34"
+            stroke="#4D4D4D"
+            xmlns="http://www.w3.org/2000/svg"
+            class="feature-card__link-icon"
+          >
+            <path
+              d="M6.375 27.625L27.625 6.375M27.625 6.375L11.6875 6.375M27.625 6.375V22.3125"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+      </li>
+
+      <li class="hero__features-item feature-card">
+        <img
+          src="features/feature-3.webp" alt="" width="82" height="82"
+          class="feature-card__icon"
+        />
+        <p class="feature-card__title">Effortless Property Management</p>
+        <a href="#" class="feature-card__link">
+          <svg
+            width="34"
+            height="34"
+            viewBox="0 0 34 34"
+            stroke="#4D4D4D"
+            xmlns="http://www.w3.org/2000/svg"
+            class="feature-card__link-icon"
+          >
+            <path
+              d="M6.375 27.625L27.625 6.375M27.625 6.375L11.6875 6.375M27.625 6.375V22.3125"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+      </li>
+
+      <li class="hero__features-item feature-card">
+        <img
+          src="features/feature-4.webp" alt="" width="82" height="82"
+          class="feature-card__icon"
+        />
+        <p class="feature-card__title">Smart Investments, Informed Decisions</p>
+        <a href="#" class="feature-card__link">
+          <svg
+            width="34"
+            height="34"
+            viewBox="0 0 34 34"
+            stroke="#4D4D4D"
+            xmlns="http://www.w3.org/2000/svg"
+            class="feature-card__link-icon"
+          >
+            <path
+              d="M6.375 27.625L27.625 6.375M27.625 6.375L11.6875 6.375M27.625 6.375V22.3125"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="properties" data-js-properties>
+  <div class="properties__inner container">
+    <header class="properties__header">
+      <h2 class="properties__title">Featured Properties</h2>
+      <img
+        src="icons/stars.svg" class="properties__stars" alt="" width="69"
+        height="30"
+      />
     </header>
 
-    <section class="hero">
-      <div class="hero__inner">
-        <div class="hero__body">
-          <div class="hero__info">
-            <h1 class="hero__title">
-              Discover Your Dream <br />
-              Property with Estatein
-            </h1>
-            <p class="hero__text">
-              Your journey to finding the perfect property begins here. Explore our listings to find
-              the home that matches your dreams.
-            </p>
+    <p class="properties__description">
+      Explore our handpicked selection of featured properties. Each listing offers a glimpse into
+      exceptional homes and investments available through Estatein. Click "View Details" for more
+      information.
+    </p>
+    <div class="swiper properties__list" data-js-properties-grid>
+      <div class="swiper-wrapper"></div>
+    </div>
+
+    <div class="properties__bottom">
+      <a href="#" class="properties__cta-button button">View All Properties</a>
+      <div class="pagination" data-js-pagination>
+        <button
+          class="pagination__button pagination__button--disabled"
+          aria-label="Previous properties"
+          title="Previous"
+          data-js-pagination-prev
+        >
+          <img src="icons/pagination-prev.svg" alt="" width="21" height="18" />
+        </button>
+
+        <div class="pagination__controls">
+          <span
+            class="pagination__current-page" data-js-pagination-current
+          >01 </span>
+          <span
+            class="pagination__all-pages" data-js-pagination-total
+          >of 10</span>
+        </div>
+
+        <button
+          class="pagination__button"
+          aria-label="Next properties"
+          title="Next"
+          data-js-pagination-next
+        >
+          <img src="icons/pagination-next.svg" alt="" width="21" height="18" />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="testimonials" data-js-testimonials>
+  <div class="testimonials__inner container">
+    <header class="testimonials__header">
+      <h2 class="testimonials__title">What Our Clients Say</h2>
+      <img
+        src="icons/stars.svg" class="testimonials__stars" alt="" width="69"
+        height="30"
+      />
+    </header>
+    <p class="testimonials__description">
+      Read the success stories and heartfelt testimonials from our valued clients. Discover why they chose
+      Estatein for their real estate needs.
+    </p>
+    <div class="swiper testimonials__list" data-js-testimonials-grid>
+      <div class="swiper-wrapper"></div>
+    </div>
+
+    <div class="testimonials__bottom">
+      <a
+        href="#" class="testimonials__cta-button button"
+      >View All Testimonials
+      </a>
+      <div class="pagination" data-js-testimonials-pagination>
+        <button
+          class="pagination__button pagination__button--disabled"
+          aria-label="Previous testimonial"
+          title="Previous"
+          data-js-testimonials-pagination-prev
+        >
+          <img src="icons/pagination-prev.svg" alt="" width="21" height="18" />
+        </button>
+
+        <div class="pagination__controls">
+          <span
+            class="pagination__current-page"
+            data-js-testimonials-pagination-current
+          >01 </span>
+          <span
+            class="pagination__all-pages" data-js-testimonials-pagination-total
+          >of 10</span>
+        </div>
+
+        <button
+          class="pagination__button"
+          aria-label="Next questions"
+          title="Next"
+          data-js-testimonials-pagination-next
+        >
+          <img src="icons/pagination-next.svg" alt="" width="21" height="18" />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="faq" data-js-faq>
+  <div class="faq__inner container">
+    <header class="faq__header">
+      <h2 class="faq__title">Frequantly Asked Questions</h2>
+      <img
+        src="icons/stars.svg" class="faq__stars" alt="" width="69" height="30"
+      />
+    </header>
+    <p class="faq__description">
+      Find answers to common questions about Estatein's services, property listings, and the real estate
+      process. We're here to provide clarity and assist you every step of the way.
+    </p>
+    <div class="swiper faq__list" data-js-faq-grid>
+      <div class="swiper-wrapper"></div>
+    </div>
+
+    <div class="faq__bottom">
+      <a href="#" class="faq__cta-button button">View All FAQ's</a>
+      <div class="pagination" data-js-faq-pagination>
+        <button
+          class="pagination__button pagination__button--disabled"
+          aria-label="Previous questions"
+          title="Previous"
+          data-js-faq-pagination-prev
+        >
+          <img src="icons/pagination-prev.svg" alt="" width="21" height="18" />
+        </button>
+
+        <div class="pagination__controls">
+          <span
+            class="pagination__current-page" data-js-faq-pagination-current
+          >01 </span>
+          <span
+            class="pagination__all-pages" data-js-faq-pagination-total
+          >of 10</span>
+        </div>
+
+        <button
+          class="pagination__button"
+          aria-label="Next questions"
+          title="Next"
+          data-js-faq-pagination-next
+        >
+          <img src="icons/pagination-next.svg" alt="" width="21" height="18" />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="cta">
+  <div class="cta__inner container">
+    <div class="cta__content">
+      <h2 class="cta__title">Start Your Real Estate Journey Today</h2>
+      <p class="cta__description">
+        Your dream property is just a click away. Whether you're looking for a new home, a strategic
+        investment, or expert real estate advice, Estatein is here to assist you every step of the way.
+        Take the first step towards your real estate goals and explore our available properties or get
+        in touch with our team for personalized assistance.
+      </p>
+    </div>
+    <a
+      href="#" class="cta__button button button--primary"
+    >Explore Properties
+    </a>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer__inner container">
+    <div class="footer__main">
+      <div class="footer__info">
+        <a href="#" class="footer__logo logo">
+          <img src="backgrounds/logo.svg" alt="Logo" width="114" height="34" />
+        </a>
+        <form class="footer__subscribe-form">
+          <div class="footer__email-input-overlay">
+            <label for="email">
+              <input
+                type="email" id="email" class="footer__email-input"
+                placeholder="Enter Your Email"
+              />
+            </label>
           </div>
-
-          <div class="hero__actions">
-            <a
-              href="#"
-              class="button"
-              >Learn More</a
-            >
-            <a
-              href="#"
-              class="button button--primary"
-              >Browse Properties</a
-            >
-          </div>
-
-          <ul class="hero__kpi-list">
-            <div class="hero__kpi-item kpi-card">
-              <h3 class="kpi-card__value">200+</h3>
-              <p class="kpi-card__text">Happy Customers</p>
-            </div>
-
-            <div class="hero__kpi-item kpi-card">
-              <h3 class="kpi-card__value">10k+</h3>
-              <p class="kpi-card__text">Properties For Clients</p>
-            </div>
-
-            <div class="hero__kpi-item kpi-card">
-              <h3 class="kpi-card__value">16+</h3>
-              <p class="kpi-card__text">Years of Experience</p>
-            </div>
+          <button
+            type="submit" class="footer__submit-button" aria-label="Subscribe"
+          ></button>
+        </form>
+      </div>
+      <nav class="footer__nav">
+        <div class="footer__nav-column">
+          <h6 class="footer__nav-title">Home</h6>
+          <ul class="footer__nav-list">
+            <li class="footer__nav-item">
+              <a href="#" class="footer__nav-link"> Hero Section</a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="#" class="footer__nav-link"> Features</a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="#" class="footer__nav-link"> Properties</a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="#" class="footer__nav-link"> Testimonials</a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="#" class="footer__nav-link"> FAQ's</a>
+            </li>
           </ul>
         </div>
-        <div class="hero__image-wrapper">
-          <div class="hero__circle circle">
-            <div class="circle__overlay">
-              <img
-                src="backgrounds/circle.webp"
-                alt=""
-                width="170"
-                height="170"
-                class="circle__image"
-              />
-            </div>
-          </div>
 
-          <img
-            src="backgrounds/hero.webp"
-            alt="Hero image"
-            width="900"
-            height="900"
-            class="hero__image"
-          />
+        <div class="footer__nav-column">
+          <h6 class="footer__nav-title">About Us</h6>
+          <ul class="footer__nav-list">
+            <li class="footer__nav-item">
+              <a href="#" class="footer__nav-link">Our Story</a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="#" class="footer__nav-link"> Our Works</a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="#" class="footer__nav-link"> How It Works</a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="#" class="footer__nav-link"> Our Team</a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="#" class="footer__nav-link"> Our Clients</a>
+            </li>
+          </ul>
         </div>
-        <ul class="hero__features-list">
-          <li class="hero__features-item feature-card">
-            <img
-              src="features/feature-1.webp"
-              alt=""
-              width="82"
-              height="82"
-              class="feature-card__icon"
-            />
-            <p class="feature-card__title">Find Your Dream Home</p>
-            <a
-              href="#"
-              class="feature-card__link"
-            >
-              <svg
-                width="34"
-                height="34"
-                viewBox="0 0 34 34"
-                stroke="#4D4D4D"
-                xmlns="http://www.w3.org/2000/svg"
-                class="feature-card__link-icon"
-              >
-                <path
-                  d="M6.375 27.625L27.625 6.375M27.625 6.375L11.6875 6.375M27.625 6.375V22.3125"
-                  stroke-wwidth="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </a>
-          </li>
 
-          <li class="hero__features-item feature-card">
-            <img
-              src="features/feature-2.webp"
-              alt=""
-              width="82"
-              height="82"
-              class="feature-card__icon"
-            />
-            <p class="feature-card__title">Unlock Property Value</p>
-            <a
-              href="#"
-              class="feature-card__link"
-            >
-              <svg
-                width="34"
-                height="34"
-                viewBox="0 0 34 34"
-                stroke="#4D4D4D"
-                xmlns="http://www.w3.org/2000/svg"
-                class="feature-card__link-icon"
-              >
-                <path
-                  d="M6.375 27.625L27.625 6.375M27.625 6.375L11.6875 6.375M27.625 6.375V22.3125"
-                  stroke-wwidth="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </a>
-          </li>
+        <div class="footer__nav-column">
+          <h6 class="footer__nav-title">Properties</h6>
+          <ul class="footer__nav-list">
+            <li class="footer__nav-item">
+              <a href="#" class="footer__nav-link">Portfolio</a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="#" class="footer__nav-link">Categories</a>
+            </li>
+          </ul>
+        </div>
 
-          <li class="hero__features-item feature-card">
-            <img
-              src="features/feature-3.webp"
-              alt=""
-              width="82"
-              height="82"
-              class="feature-card__icon"
-            />
-            <p class="feature-card__title">Effortless Property Management</p>
-            <a
-              href="#"
-              class="feature-card__link"
-            >
-              <svg
-                width="34"
-                height="34"
-                viewBox="0 0 34 34"
-                stroke="#4D4D4D"
-                xmlns="http://www.w3.org/2000/svg"
-                class="feature-card__link-icon"
-              >
-                <path
-                  d="M6.375 27.625L27.625 6.375M27.625 6.375L11.6875 6.375M27.625 6.375V22.3125"
-                  stroke-wwidth="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </a>
-          </li>
+        <div class="footer__nav-column">
+          <h6 class="footer__nav-title">Sevices</h6>
+          <ul class="footer__nav-list">
+            <li class="footer__nav-item">
+              <a href="#" class="footer__nav-link">Valuation Mastery</a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="#" class="footer__nav-link">Strategic Marketing</a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="#" class="footer__nav-link">Negotiation Wizardly</a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="#" class="footer__nav-link">Closing Success</a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="#" class="footer__nav-link">Property Management</a>
+            </li>
+          </ul>
+        </div>
 
-          <li class="hero__features-item feature-card">
-            <img
-              src="features/feature-4.webp"
-              alt=""
-              width="82"
-              height="82"
-              class="feature-card__icon"
-            />
-            <p class="feature-card__title">Smart Investments, Informed Decisions</p>
-            <a
-              href="#"
-              class="feature-card__link"
-            >
-              <svg
-                width="34"
-                height="34"
-                viewBox="0 0 34 34"
-                stroke="#4D4D4D"
-                xmlns="http://www.w3.org/2000/svg"
-                class="feature-card__link-icon"
-              >
-                <path
-                  d="M6.375 27.625L27.625 6.375M27.625 6.375L11.6875 6.375M27.625 6.375V22.3125"
-                  stroke-wwidth="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </a>
-          </li>
-        </ul>
+        <div class="footer__nav-column">
+          <h6 class="footer__nav-title">Contact Us</h6>
+          <ul class="footer__nav-list">
+            <li class="footer__nav-item">
+              <a href="#" class="footer__nav-link"> Contact Form</a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="#" class="footer__nav-link">Our Offices</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div class="footer__bottom-inner container">
+      <div class="footer__legal">
+        <small
+          class="footer__copyright"
+        >&copy;
+          <time datetime="2026" data-js-copyright-year> 2026</time>
+          Estatein. All Rights Reserved.
+        </small>
+        <a href="#" class="footer__terms">Terms & Conditions</a>
       </div>
-    </section>
 
-    <section
-      class="properties"
-      data-js-properties
-    >
-      <div class="properties__inner container">
-        <header class="properties__header">
-          <h2 class="properties__title">Featured Properties</h2>
-          <img
-            src="icons/stars.svg"
-            class="properties__stars"
-            alt=""
-            width="69"
-            height="30"
-          />
-        </header>
-
-        <p class="properties__description">
-          Explore our handpicked selection of featured properties. Each listing offers a glimpse
-          into exceptional homes and investments available through Estatein. Click "View Details"
-          for more information.
-        </p>
-        <div
-          class="properties__grid"
-          data-js-properties-grid
-        ></div>
-
-        <div class="properties__bottom">
-          <a
-            href="#"
-            class="properties__cta-button button"
-            >View All Properties</a
-          >
-          <div
-            class="pagination"
-            data-js-pagination
-          >
-            <button
-              class="pagination__button pagination__button--disabled"
-              aria-label="Previous properties"
-              title="Previous"
-              data-js-pagination-prev
-            >
-              <img
-                src="icons/pagination-prev.svg"
-                alt=""
-                width="21"
-                height="18"
-              />
-            </button>
-
-            <div>
-              <span
-                class="pagination__current-page"
-                data-js-pagination-current
-                >01
-              </span>
-              <span
-                class="pagination__all-pages"
-                data-js-pagination-total
-                >of 10</span
-              >
-            </div>
-
-            <button
-              class="pagination__button"
-              aria-label="Next properties"
-              title="Next"
-              data-js-pagination-next
-            >
-              <img
-                src="icons/pagination-next.svg"
-                alt=""
-                width="21"
-                height="18"
-              />
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section
-      class="testimonials"
-      data-js-testimonials
-    >
-      <div class="testimonials__inner container">
-        <header class="testimonials__header">
-          <h2 class="testimonials__title">What Our Clients Say</h2>
-          <img
-            src="icons/stars.svg"
-            class="testimonials__stars"
-            alt=""
-            width="69"
-            height="30"
-          />
-        </header>
-        <p class="testimonials__description">
-          Read the success stories and heartfelt testimonials from our valued clients. Discover why
-          they chose Estatein for their real estate needs.
-        </p>
-        <div
-          class="testimonials__grid"
-          data-js-testimonials-grid
-        ></div>
-
-        <div class="testimonials__bottom">
-          <a
-            href="#"
-            class="testimonials__cta-button button"
-            >View All Testimonials</a
-          >
-          <div
-            class="pagination"
-            data-js-testimonials-pagination
-          >
-            <button
-              class="pagination__button pagination__button--disabled"
-              aria-label="Previous testimonial"
-              title="Previous"
-              data-js-testimonials-pagination-prev
-            >
-              <img
-                src="icons/pagination-prev.svg"
-                alt=""
-                width="21"
-                height="18"
-              />
-            </button>
-
-            <div>
-              <span
-                class="pagination__current-page"
-                data-js-testimonials-pagination-current
-                >01
-              </span>
-              <span
-                class="pagination__all-pages"
-                data-js-testimonials-pagination-total
-                >of 10</span
-              >
-            </div>
-
-            <button
-              class="pagination__button"
-              aria-label="Next questions"
-              title="Next"
-              data-js-testimonials-pagination-next
-            >
-              <img
-                src="icons/pagination-next.svg"
-                alt=""
-                width="21"
-                height="18"
-              />
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section
-      class="faq"
-      data-js-faq
-    >
-      <div class="faq__inner container">
-        <header class="faq__header">
-          <h2 class="faq__title">Frequantly Asked Questions</h2>
-          <img
-            src="icons/stars.svg"
-            class="faq__stars"
-            alt=""
-            width="69"
-            height="30"
-          />
-        </header>
-        <p class="faq__description">
-          Find answers to common questions about Estatein's services, property listings, and the
-          real estate process. We're here to provide clarity and assist you every step of the way.
-        </p>
-        <div
-          class="faq__grid"
-          data-js-faq-grid
-        ></div>
-
-        <div class="faq__bottom">
-          <a
-            href="#"
-            class="faq__cta-button button"
-            >View All FAQ's</a
-          >
-          <div
-            class="pagination"
-            data-js-faq-pagination
-          >
-            <button
-              class="pagination__button pagination__button--disabled"
-              aria-label="Previous questions"
-              title="Previous"
-              data-js-faq-pagination-prev
-            >
-              <img
-                src="icons/pagination-prev.svg"
-                alt=""
-                width="21"
-                height="18"
-              />
-            </button>
-
-            <div>
-              <span
-                class="pagination__current-page"
-                data-js-faq-pagination-current
-                >01
-              </span>
-              <span
-                class="pagination__all-pages"
-                data-js-faq-pagination-total
-                >of 10</span
-              >
-            </div>
-
-            <button
-              class="pagination__button"
-              aria-label="Next questions"
-              title="Next"
-              data-js-faq-pagination-next
-            >
-              <img
-                src="icons/pagination-next.svg"
-                alt=""
-                width="21"
-                height="18"
-              />
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="cta">
-      <div class="cta__inner container">
-        <div class="cta__content">
-          <h2 class="cta__title">Start Your Real Estate Journey Today</h2>
-          <p class="cta__description">
-            Your dream property is just a click away. Whether you're looking for a new home, a
-            strategic investment, or expert real estate advice, Estatein is here to assist you every
-            step of the way. Take the first step towards your real estate goals and explore our
-            available properties or get in touch with our team for personalized assistance.
-          </p>
-        </div>
+      <div class="footer__socials">
         <a
-          href="#"
-          class="cta__button button button--primary"
-          >Explore Properties</a
+          href="#" class="footer__social-link" aria-label="Facebook"
+          title="Facebook"
         >
+          <img
+            src="social-icons/facebook_white.svg"
+            class="footer__social-icon"
+            alt="Facebook"
+            width="24"
+            height="24"
+          />
+        </a>
+        <a
+          href="#" class="footer__social-link" aria-label="LinkedIn"
+          title="LinkedIn"
+        >
+          <img
+            src="social-icons/linkedin_white.svg"
+            class="footer__social-icon"
+            alt="Facebook"
+            width="24"
+            height="24"
+          />
+        </a>
+        <a
+          href="#" class="footer__social-link" aria-label="Twitter"
+          title="Twitter"
+        >
+          <img
+            src="social-icons/twitter_white.svg"
+            class="footer__social-icon"
+            alt="Twitter"
+            width="24"
+            height="24"
+          />
+        </a>
+        <a
+          href="#" class="footer__social-link" aria-label="YouTube"
+          title="YouTube"
+        >
+          <img
+            src="social-icons/youtube_white.svg"
+            class="footer__social-icon"
+            alt="YouTube"
+            width="24"
+            height="24"
+          />
+        </a>
       </div>
-    </section>
-
-    <footer class="footer">
-      <div class="footer__inner container">
-        <div class="footer__main">
-          <div class="footer__info">
-            <a
-              href="#"
-              class="footer__logo logo"
-            >
-              <img
-                src="backgrounds/logo.svg"
-                alt="Logo"
-                width="114"
-                height="34"
-              />
-            </a>
-            <form class="footer__subscribe-form">
-              <div class="footer__email-input-overlay">
-                <div>
-                  <input
-                    type="email"
-                    class="footer__email-input"
-                    placeholder="Enter Your Email"
-                  />
-                </div>
-              </div>
-              <button
-                type="submit"
-                class="footer__submit-button"
-                aria-label="Subscribe"
-              ></button>
-            </form>
-          </div>
-          <nav class="footer__nav">
-            <div class="footer__nav-column">
-              <h6 class="footer__nav-title">Home</h6>
-              <ul class="footer__nav-list">
-                <li class="footer__nav-item">
-                  <a
-                    href="#"
-                    class="footer__nav-link"
-                  >
-                    Hero Section
-                  </a>
-                </li>
-                <li class="footer__nav-item">
-                  <a
-                    href="#"
-                    class="footer__nav-link"
-                  >
-                    Features
-                  </a>
-                </li>
-                <li class="footer__nav-item">
-                  <a
-                    href="#"
-                    class="footer__nav-link"
-                  >
-                    Properties
-                  </a>
-                </li>
-                <li class="footer__nav-item">
-                  <a
-                    href="#"
-                    class="footer__nav-link"
-                  >
-                    Testimonials
-                  </a>
-                </li>
-                <li class="footer__nav-item">
-                  <a
-                    href="#"
-                    class="footer__nav-link"
-                  >
-                    FAQ's
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div class="footer__nav-column">
-              <h6 class="footer__nav-title">About Us</h6>
-              <ul class="footer__nav-list">
-                <li class="footer__nav-item">
-                  <a
-                    href="#"
-                    class="footer__nav-link"
-                    >Our Story</a
-                  >
-                </li>
-                <li class="footer__nav-item">
-                  <a
-                    href="#"
-                    class="footer__nav-link"
-                  >
-                    Our Works
-                  </a>
-                </li>
-                <li class="footer__nav-item">
-                  <a
-                    href="#"
-                    class="footer__nav-link"
-                  >
-                    How It Works
-                  </a>
-                </li>
-                <li class="footer__nav-item">
-                  <a
-                    href="#"
-                    class="footer__nav-link"
-                  >
-                    Our Team
-                  </a>
-                </li>
-                <li class="footer__nav-item">
-                  <a
-                    href="#"
-                    class="footer__nav-link"
-                  >
-                    Our Clients
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div class="footer__nav-column">
-              <h6 class="footer__nav-title">Properties</h6>
-              <ul class="footer__nav-list">
-                <li class="footer__nav-item">
-                  <a
-                    href="#"
-                    class="footer__nav-link"
-                    >Portfolio</a
-                  >
-                </li>
-                <li class="footer__nav-item">
-                  <a
-                    href="#"
-                    class="footer__nav-link"
-                    >Categories</a
-                  >
-                </li>
-              </ul>
-            </div>
-
-            <div class="footer__nav-column">
-              <h6 class="footer__nav-title">Sevices</h6>
-              <ul class="footer__nav-list">
-                <li class="footer__nav-item">
-                  <a
-                    href="#"
-                    class="footer__nav-link"
-                    >Valuation Mastery</a
-                  >
-                </li>
-                <li class="footer__nav-item">
-                  <a
-                    href="#"
-                    class="footer__nav-link"
-                    >Strategic Marketing</a
-                  >
-                </li>
-                <li class="footer__nav-item">
-                  <a
-                    href="#"
-                    class="footer__nav-link"
-                    >Negotiation Wizardly</a
-                  >
-                </li>
-                <li class="footer__nav-item">
-                  <a
-                    href="#"
-                    class="footer__nav-link"
-                    >Closing Success</a
-                  >
-                </li>
-                <li class="footer__nav-item">
-                  <a
-                    href="#"
-                    class="footer__nav-link"
-                    >Property Management</a
-                  >
-                </li>
-              </ul>
-            </div>
-
-            <div class="footer__nav-column">
-              <h6 class="footer__nav-title">Contact Us</h6>
-              <ul class="footer__nav-list">
-                <li class="footer__nav-item">
-                  <a
-                    href="#"
-                    class="footer__nav-link"
-                    >Contact Form</a
-                  >
-                </li>
-                <li class="footer__nav-item">
-                  <a
-                    href="#"
-                    class="footer__nav-link"
-                    >Our Offices</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </nav>
-        </div>
-      </div>
-      <div class="footer__bottom">
-        <div class="footer__bottom-inner container">
-          <div class="footer__legal">
-            <p class="footer__copyright">&copy; 2023 Estatein. All Rights Reserved.</p>
-            <a
-              href="#"
-              class="footer__terms"
-              >Terms & Conditions</a
-            >
-          </div>
-
-          <div class="footer__socials">
-            <a
-              href="#"
-              class="footer__social-link"
-              aria-label="Facebook"
-              title="Facebook"
-            >
-              <img
-                src="social-icons/facebook_white.svg"
-                class="footer__social-icon"
-                alt="Facebook"
-              />
-            </a>
-            <a
-              href="#"
-              class="footer__social-link"
-              aria-label="LinkedIn"
-              title="LinkedIn"
-            >
-              <img
-                src="social-icons/linkedin_white.svg"
-                class="footer__social-icon"
-                alt="Facebook"
-              />
-            </a>
-            <a
-              href="#"
-              class="footer__social-link"
-              aria-label="Twitter"
-              title="Twitter"
-            >
-              <img
-                src="social-icons/twitter_white.svg"
-                class="footer__social-icon"
-                alt="Twitter"
-              />
-            </a>
-            <a
-              href="#"
-              class="footer__social-link"
-              aria-label="YouTube"
-              title="YouTube"
-            >
-              <img
-                src="social-icons/youtube_white.svg"
-                class="footer__social-icon"
-                alt="YouTube"
-              />
-            </a>
-          </div>
-        </div>
-      </div>
-    </footer>
-  </body>
+    </div>
+  </div>
+</footer>
+</body>
 </html>
